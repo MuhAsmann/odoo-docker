@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_book_reading,access_book_reading,model_book_reading,,1,1,1,1
+access_book_reading_day,access_book_reading_day,model_book_reading_day,,1,1,1,1
