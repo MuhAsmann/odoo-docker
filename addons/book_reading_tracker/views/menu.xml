@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+
+    <record id="action_dashboard_redirect" model="ir.actions.act_url">
+        <field name="name">Reading Dashboard</field>
+        <field name="url">/reading_dashboard</field>
+        <field name="target">self</field>
+    </record>
+
+    <menuitem 
+        id="menu_books_root"
+        name="Book Tracker"
+        sequence="10"
+    />
+
+    <menuitem id="menu_reading_dashboard"
+              name="Reading Dashboard"
+              parent="menu_books_root"
+              action=""
+              sequence="20"/>
+
+    <menuitem id="menu_reading_dashboard_link"
+              parent="menu_reading_dashboard"
+              action="action_dashboard_redirect"
+              name="View Dashboard"/>
+
+  </data>
+</odoo>

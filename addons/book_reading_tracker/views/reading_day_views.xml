@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_reading_day_tree" model="ir.ui.view">
+        <field name="name">book.reading.day.tree</field>
+        <field name="model">book.reading.day</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_reading_day_form" model="ir.ui.view">
+        <field name="name">book.reading.day.form</field>
+        <field name="model">book.reading.day</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="date"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_reading_day" model="ir.actions.act_window">
+        <field name="name">Reading Tracker</field>
+        <field name="res_model">book.reading.day</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<odoo>
+  <template id="reading_dashboard_template" name="Reading Tracker Dashboard">
+    <t t-call="website.layout">
+      <div class="container my-5">
+        <h2 class="mb-4">📚 Reading Contribution</h2>
+        <div class="d-flex flex-row">
+          <t t-foreach="grid" t-as="week">
+            <div class="d-flex flex-column me-1">
+              <t t-foreach="week" t-as="day">
+                <div t-attf-style="width:12px;height:12px;margin-bottom:2px;background-color:#{'3cba54' if day['read'] else 'e0e0e0'};border-radius:2px;">
+                </div>
+              </t>
+            </div>
+          </t>
+        </div>
+      </div>
+    </t>
+  </template>
+</odoo>
