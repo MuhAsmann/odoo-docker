@@ -5,6 +5,7 @@
     'category': 'Productivity',
     'depends': ['base'],
     'data': [
+        'security/ir.model.access.csv',
         'views/menu.xml',
         'views/reading_day_views.xml',
     ],
