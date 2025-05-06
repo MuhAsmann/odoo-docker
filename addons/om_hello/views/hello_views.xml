@@ -1,0 +1,42 @@
+<odoo>
+    <!-- Form View -->
+    <record id="view_hello_form" model="ir.ui.view">
+        <field name="name">om.hello.form</field>
+        <field name="model">om.hello</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="address"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree/List View -->
+    <record id="view_hello_tree" model="ir.ui.view">
+        <field name="name">om.hello.tree</field>
+        <field name="model">om.hello</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="address"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_hello" model="ir.actions.act_window">
+        <field name="name">Hello List</field>
+        <field name="res_model">om.hello</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_hello_root" name="Hello App"/>
+    <menuitem id="menu_hello" name="Hello List"
+              parent="menu_hello_root"
+              action="action_hello"/>
+</odoo>
