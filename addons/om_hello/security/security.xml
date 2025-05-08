@@ -3,5 +3,5 @@
         <field name="name">om.hello</field>
         <field name="model">om.hello</field>
         <field name="state">base</field>
-    </record>
+    </record>    
 </odoo>

@@ -1,0 +1,41 @@
+<odoo>
+  <record id="view_buku_form" model="ir.ui.view">
+    <field name="name">om.buku.form</field>
+    <field name="model">om.buku</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group string="Informasi Buku">
+            <field name="name"/>
+            <field name="penulis"/>
+            <field name="tahun_terbit"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_buku_tree" model="ir.ui.view">
+    <field name="name">om.buku.tree</field>
+    <field name="model">om.buku</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="penulis"/>
+        <field name="tahun_terbit"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="action_buku" model="ir.actions.act_window">
+    <field name="name">Buku</field>
+    <field name="res_model">om.buku</field>
+    <field name="view_mode">kanban,tree,form</field>
+  </record>
+
+  <menuitem id="menu_perpus_root" name="Perpustakaan"/>
+  <menuitem id="menu_perpus_buku"
+            name="Data Buku"
+            parent="menu_perpus_root"
+            action="action_buku"/>
+</odoo>

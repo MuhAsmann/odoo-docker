@@ -6,6 +6,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/hello_views.xml',
+        'views/buku_views.xml',
     ],
     'installable': True,
     'application': True,
